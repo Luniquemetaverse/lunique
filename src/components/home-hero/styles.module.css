@@ -1,0 +1,62 @@
+.gradient-text {
+  @apply mx-3 font-normal xs:text-[12px] lsm:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl;
+  background: linear-gradient(270.24deg, #bc9cff 70%, #763eee 90.03%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'Copperplate';
+  font-style: normal;
+}
+
+.gradient-subtext {
+  @apply text-[6px] md:text-[14px] lg:text-sm xl:text-lg mx-3 font-bold;
+  background: linear-gradient(0deg, #763eee, #763eee),
+    linear-gradient(0deg, #bc9cff, #bc9cff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: 'Copperplate';
+  font-style: normal;
+}
+
+.launch {
+  @apply text-white mt-12 text-base font-semibold;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.title {
+  @apply text-white font-normal xs:text-[14px] lsm:text-[20px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl;
+  font-family: 'Copperplate';
+  font-style: normal;
+  word-spacing: 5px;
+}
+
+.date {
+  @apply flex flex-row font-normal;
+  color: rgba(255, 199, 0, 1);
+  font-size: 40px;
+  font-family: 'Copperplate';
+  font-style: normal;
+}
+
+.register-btn {
+  @apply px-5 py-2 rounded-sm mt-3;
+  background-color: rgba(255, 199, 0, 1);
+  font-family: 'Copperplate';
+}
+
+.bg-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  @apply h-screen w-full;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}

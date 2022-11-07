@@ -83,7 +83,7 @@ function Index() {
   )
 
   function startTimer() {
-    let dateFuture = new Date(new Date().getFullYear(), 10, 10)
+    let dateFuture = new Date(new Date().getFullYear() + 1, 0, 8)
     let dateNow = new Date()
     let seconds = Math.floor((dateFuture - dateNow) / 1000)
     let minutes = Math.floor(seconds / 60)

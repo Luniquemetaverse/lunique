@@ -4,7 +4,22 @@ import classes from './styles.module.css'
 import { XIcon } from '@heroicons/react/outline'
 
 function Index({ open, onClose }) {
-  const [value, setValue] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [instaHandle, setInstaHandle] = useState('')
+
+  const handleSubmit = async () => {
+    try {
+      await fetch('https://api.apispreadsheets.com/data/mAPggmjkeatjtiap/', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, insta_handle: instaHandle }),
+      })
+      onClose()
+    } catch (e) {
+      onClose()
+      console.log(e, ' =====> error wgile submittion')
+    }
+  }
 
   return (
     <Transition appear show={open} as={Fragment}>
@@ -49,28 +64,33 @@ function Index({ open, onClose }) {
                     </div>
 
                     <input
-                      value={value}
+                      value={name}
                       className={classes['dialog-input']}
-                      onChange={({ target }) => setValue(target.value)}
+                      onChange={({ target }) => setName(target.value)}
                       placeholder="First Name *"
                     />
 
                     <input
-                      value={value}
+                      value={email}
                       className={classes['dialog-input']}
-                      onChange={({ target }) => setValue(target.value)}
+                      onChange={({ target }) => setEmail(target.value)}
                       placeholder="Email *"
                     />
 
                     <input
-                      value={value}
+                      value={instaHandle}
                       className={classes['dialog-input']}
-                      onChange={({ target }) => setValue(target.value)}
+                      onChange={({ target }) => setInstaHandle(target.value)}
                       placeholder="Instagram handle"
                     />
 
                     <div className="mt-4">
-                      <button className={classes['submit-btn']}>SUBMIT</button>
+                      <button
+                        onClick={handleSubmit}
+                        className={classes['submit-btn']}
+                      >
+                        SUBMIT
+                      </button>
                     </div>
                   </div>
                 </>

@@ -1,6 +1,6 @@
 .gradient-text {
   @apply mx-3 font-normal xs:text-[12px] lsm:text-[14px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl;
-  background: linear-gradient(270.24deg, #bc9cff 70%, #763eee 90.03%),
+  background: linear-gradient(270.24deg, #ff6a45 70%, #ff3300 90.03%),
     linear-gradient(0deg, #ffffff, #ffffff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -10,7 +10,7 @@
 
 .gradient-subtext {
   @apply text-[6px] md:text-[14px] lg:text-sm xl:text-lg mx-3 font-bold;
-  background: linear-gradient(0deg, #763eee, #763eee),
+  background: linear-gradient(0deg, #ff6a45, #ff3300),
     linear-gradient(0deg, #bc9cff, #bc9cff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

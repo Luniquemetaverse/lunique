@@ -68,7 +68,7 @@ function Index() {
             </div>
           </div>
           <p className="text-white mt-5 text-base md:text-base">
-            Register for your chance to win an exclusive invite
+            Register for your chance to win an exclusive invite!
           </p>
           <button
             className={classes['register-btn']}

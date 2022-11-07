@@ -6,9 +6,9 @@ const SharedLayout = ({ children, title, className = '' }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Head>
-        <title>VBS | {title}</title>
+        <title>Lunique | {title}</title>
       </Head>
-      <Header />
+      
       <main className={className}>{children}</main>
     </div>
   )

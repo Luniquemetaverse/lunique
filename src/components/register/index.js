@@ -57,9 +57,9 @@ function Index({ open, onClose }) {
                     />
                   </div>
                   <div className="flex flex-col items-center px-12 py-4">
-                    <div className="mt-2 w-80">
+                    <div className="mt-2 w-85">
                       <p className={classes['dialog-title']}>
-                        Register for your chance to win an exclusive invite
+                        Register for your chance to win an exclusive invite!
                       </p>
                     </div>
 

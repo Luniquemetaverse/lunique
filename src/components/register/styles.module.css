@@ -1,5 +1,5 @@
 .submit-btn {
-  @apply inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:bg-gray-200 disabled:text-gray-600;
+  @apply inline-flex justify-center rounded-sm border border-transparent bg-red-100 px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:bg-gray-200 disabled:text-gray-600;
   background-color: rgba(255, 199, 0, 1);
   font-family: 'Copperplate';
 }

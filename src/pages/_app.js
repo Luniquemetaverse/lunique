@@ -10,23 +10,23 @@ function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <NextSeo
-        title="Vaionex Project"
-        description="Vaionex Project Description"
-        canonical="https://logs.vaionex.com"
+        title="Lunique"
+        description="An exclusive luxury marketplace in the realms of metaverse."
+        canonical="https://lunique.io"
         openGraph={{
-          url: 'https://logs.vaionex.com',
-          title: 'Vaionex Project',
-          description: 'Vaionex Project Description',
+          url: 'https://lunique.io',
+          title: 'Lunique',
+          description: 'An exclusive luxury marketplace in the realms of metaverse.',
           images: [
             {
-              url: 'https://4003362596-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FO6Y5aEaDzSHj33Kq8FZF%2Fuploads%2FUrOMdMLTbnwLEB1jEkJO%2FVAIONEX%20GITBOOK%20CARD-1%20(1).png?alt=media&token=fca78ea6-5b47-4ef7-bf0f-990a1f263004',
+              url: 'https://i.postimg.cc/c4SjKhVq/lunique-Card.jpg',
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             },
           ],
-          siteName: 'Vaionex Logs',
+          siteName: 'Lunique',
         }}
         twitter={{
           handle: '@Vaionex_Corp',

@@ -34,6 +34,7 @@ function App({ Component, pageProps }) {
           cardType: 'summary_large_image',
         }}
       />
+      
       <AuthComponent>
         <GetCurrentUser />
         <Component {...pageProps} />

@@ -2835,7 +2835,12 @@
     "prop-types" "^15.7.2"
     "react-is" "^17.0.2"
 
-"react@^16 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^16.9.0 || ^17.0.0 || ^18", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.0.0", "react@18.2.0":
+"react-unity-webgl@^9.2.1":
+  "integrity" "sha512-FfnzjWT3hwlRe6aKzYAvjo5OFVw7eJJWfsnB884a+5AsBF9VhLaJdQADNlQL3wPfmfpQ4zgq07G56tGfZSSNNg=="
+  "resolved" "https://registry.npmjs.org/react-unity-webgl/-/react-unity-webgl-9.2.1.tgz"
+  "version" "9.2.1"
+
+"react@^16 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^16.9.0 || ^17.0.0 || ^18", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.0.0", "react@>=16.8.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

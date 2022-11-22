@@ -3,10 +3,10 @@ import { Unity, useUnityContext } from 'react-unity-webgl'
 
 export default function DemoPage() {
   const { unityProvider, isLoaded, loadingProgression } = useUnityContext({
-    loaderUrl: 'game/Build/LuniqueBuild_Compressed.loader.js',
-    dataUrl: 'game/Build/LuniqueBuild_Compressed.data.unityweb',
-    frameworkUrl: 'game/Build/LuniqueBuild_Compressed.framework.js.unityweb',
-    codeUrl: 'game/Build/LuniqueBuild_Compressed.wasm.unityweb',
+    loaderUrl: 'game/Build/LuniqueBuild_Brotli.loader.js',
+    dataUrl: 'game/Build/LuniqueBuild_Brotli.data.unityweb',
+    frameworkUrl: 'game/Build/LuniqueBuild_Brotli.framework.js.unityweb',
+    codeUrl: 'game/Build/LuniqueBuild_Brotli.wasm.unityweb',
     streamingAssetsUrl: 'StreamingAssets',
     companyName: 'Vaionex',
     productName: 'Lunique',

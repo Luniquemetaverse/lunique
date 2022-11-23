@@ -5,6 +5,7 @@ import store from '@/redux/store'
 import GetCurrentUser from '@/presets/elements/GetCurrentUser'
 import AuthComponent from '@/components/auth'
 import { NextSeo } from 'next-seo'
+import '../utils/i18'
 
 function App({ Component, pageProps }) {
   return (
@@ -16,7 +17,8 @@ function App({ Component, pageProps }) {
         openGraph={{
           url: 'https://lunique.io',
           title: 'Lunique',
-          description: 'An exclusive luxury marketplace in the realms of metaverse.',
+          description:
+            'An exclusive luxury marketplace in the realms of metaverse.',
           images: [
             {
               url: 'https://i.postimg.cc/c4SjKhVq/lunique-Card.jpg',

@@ -2,11 +2,13 @@ import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 import classes from './styles.module.css'
 import { XIcon } from '@heroicons/react/outline'
+import { useTranslation } from 'react-i18next'
 
 function Index({ open, onClose }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [instaHandle, setInstaHandle] = useState('')
+  const { t } = useTranslation()
 
   const handleSubmit = async () => {
     try {
@@ -59,7 +61,7 @@ function Index({ open, onClose }) {
                   <div className="flex flex-col items-center px-12 py-4">
                     <div className="mt-2 w-85">
                       <p className={classes['dialog-title']}>
-                        Register for your chance to win an exclusive invite!
+                        {t('regsiterTitle')}
                       </p>
                     </div>
 
@@ -67,21 +69,21 @@ function Index({ open, onClose }) {
                       value={name}
                       className={classes['dialog-input']}
                       onChange={({ target }) => setName(target.value)}
-                      placeholder="First Name *"
+                      placeholder={`${t('name')} *`}
                     />
 
                     <input
                       value={email}
                       className={classes['dialog-input']}
                       onChange={({ target }) => setEmail(target.value)}
-                      placeholder="Email *"
+                      placeholder={`${t('email')} *`}
                     />
 
                     <input
                       value={instaHandle}
                       className={classes['dialog-input']}
                       onChange={({ target }) => setInstaHandle(target.value)}
-                      placeholder="Instagram handle"
+                      placeholder={`${t('weChat')} *`}
                     />
 
                     <div className="mt-4">
@@ -89,7 +91,7 @@ function Index({ open, onClose }) {
                         onClick={handleSubmit}
                         className={classes['submit-btn']}
                       >
-                        SUBMIT
+                        {t('submit')}
                       </button>
                     </div>
                   </div>

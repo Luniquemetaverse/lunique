@@ -19,7 +19,7 @@ function Index({ open, onClose }) {
       onClose()
     } catch (e) {
       onClose()
-      console.log(e, ' =====> error wgile submittion')
+      console.log(e, ' =====> error while submittion')
     }
   }
 

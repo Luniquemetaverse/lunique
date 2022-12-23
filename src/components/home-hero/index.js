@@ -11,22 +11,17 @@ function Index() {
   const [open, setOpen] = useState(false)
   const [isChinese, setIsChinese] = useState(false)
   const { t, i18n } = useTranslation()
-  const [timer, setTimer] = useState({
+  const [, setTimer] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   })
 
-  const wrapperStyle = {
-    backgroundImage: `url(${backgroundImg})`,
-    backgroundSize: 'cover',
-  }
-
   useEffect(() => {
-    setInterval(() => {
+    // setInterval(() => {
       startTimer()
-    }, 1000)
+    // }, 1000)
   }, [])
 
   const onClose = () => {
@@ -72,7 +67,7 @@ function Index() {
             <p className={classes['title']}>{t('title')}</p>
           </div>
           <p className={classes['launch']}>{t('launchingSoon')}</p>
-          <div className={classes['date']}>
+          {/* <div className={classes['date']}>
             <div className="flex flex-col items-center w-[80px]">
               <h1>{timer.days}</h1>
               <p className=" text-xs">{t('days')}</p>
@@ -89,7 +84,7 @@ function Index() {
               <h1>{timer.seconds}</h1>
               <p className=" text-xs">{t('seconds')}</p>
             </div>
-          </div>
+          </div> */}
           <p className="text-white mt-5 text-base md:text-base">
             {t('regsiterTitle')}
           </p>

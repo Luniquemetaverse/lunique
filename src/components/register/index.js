@@ -78,14 +78,14 @@ function Index({ open, onClose }) {
                       onChange={({ target }) => setEmail(target.value)}
                       placeholder={`${t('email')} *`}
                     />
-
+                  
                     <input
                       value={instaHandle}
                       className={classes['dialog-input']}
                       onChange={({ target }) => setInstaHandle(target.value)}
-                      placeholder={`${t('weChat')} *`}
+                      placeholder={`${t('weChat')} `}
                     />
-
+                  
                     <div className="mt-4">
                       <button
                         onClick={handleSubmit}

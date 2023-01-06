@@ -9,6 +9,7 @@ function Index({ open, onClose }) {
   const [email, setEmail] = useState('')
   const [instaHandle, setInstaHandle] = useState('')
   const { t } = useTranslation()
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = async () => {
     try {
@@ -16,7 +17,10 @@ function Index({ open, onClose }) {
         method: 'POST',
         body: JSON.stringify({ name, email, insta_handle: instaHandle }),
       })
-      onClose()
+      setIsSubmitted(true)
+      setEmail('')
+      setName('')
+      setInstaHandle('')
     } catch (e) {
       onClose()
       console.log(e, ' =====> error while submittion')
@@ -25,7 +29,16 @@ function Index({ open, onClose }) {
 
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={onClose}>
+      <Dialog
+        as="div"
+        className="relative z-10"
+        onClose={() => {
+          setTimeout(() => {
+            setIsSubmitted(false)
+          }, 1000)
+          onClose()
+        }}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -50,52 +63,65 @@ function Index({ open, onClose }) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className={`${classes['dialog']}`}>
-                <>
-                  <div>
-                    <XIcon
-                      onClick={onClose}
-                      className="block h-6 w-6 text-white float-right cursor-pointer"
-                      aria-hidden="true"
-                    />
+                <div>
+                  <XIcon
+                    onClick={() => {
+                      setTimeout(() => {
+                        setIsSubmitted(false)
+                      }, 1000)
+                      onClose()
+                    }}
+                    className="block h-6 w-6 text-white float-right cursor-pointer"
+                    aria-hidden="true"
+                  />
+                </div>
+                {isSubmitted ? (
+                  <div className=" h-80 flex flex-row justify-center items-center">
+                    <p className="text-white text-2xl w-3/4 text-center">
+                      {t('submitMsg')}
+                    </p>
                   </div>
-                  <div className="flex flex-col items-center px-12 py-4">
-                    <div className="mt-2 w-85">
-                      <p className={classes['dialog-title']}>
-                        {t('regsiterTitle')}
-                      </p>
-                    </div>
+                ) : (
+                  <>
+                    <div className="flex flex-col items-center px-12 py-4">
+                      <div className="mt-2 w-85">
+                        <p className={classes['dialog-title']}>
+                          {t('regsiterTitle')}
+                        </p>
+                      </div>
 
-                    <input
-                      value={name}
-                      className={classes['dialog-input']}
-                      onChange={({ target }) => setName(target.value)}
-                      placeholder={`${t('name')} *`}
-                    />
+                      <input
+                        value={name}
+                        className={classes['dialog-input']}
+                        onChange={({ target }) => setName(target.value)}
+                        placeholder={`${t('name')} *`}
+                      />
 
-                    <input
-                      value={email}
-                      className={classes['dialog-input']}
-                      onChange={({ target }) => setEmail(target.value)}
-                      placeholder={`${t('email')} *`}
-                    />
-                  
-                    <input
-                      value={instaHandle}
-                      className={classes['dialog-input']}
-                      onChange={({ target }) => setInstaHandle(target.value)}
-                      placeholder={`${t('weChat')} `}
-                    />
-                  
-                    <div className="mt-4">
-                      <button
-                        onClick={handleSubmit}
-                        className={classes['submit-btn']}
-                      >
-                        {t('submit')}
-                      </button>
+                      <input
+                        value={email}
+                        className={classes['dialog-input']}
+                        onChange={({ target }) => setEmail(target.value)}
+                        placeholder={`${t('email')} *`}
+                      />
+
+                      <input
+                        value={instaHandle}
+                        className={classes['dialog-input']}
+                        onChange={({ target }) => setInstaHandle(target.value)}
+                        placeholder={`${t('weChat')} `}
+                      />
+
+                      <div className="mt-4">
+                        <button
+                          onClick={handleSubmit}
+                          className={classes['submit-btn']}
+                        >
+                          {t('submit')}
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </>
+                  </>
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>

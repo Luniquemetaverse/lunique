@@ -25,6 +25,7 @@ i18n
           email: 'Email',
           weChat: 'Instagram',
           submit: 'Submit',
+          submitMsg: 'Thank you for registering, we will contact you soon!',
         },
       },
       ch: {
@@ -44,6 +45,7 @@ i18n
           email: '微信',
           weChat: '网站',
           submit: '提交',
+          submitMsg: '感谢您注册。我们会尽快与您联系',
         },
       },
     },
